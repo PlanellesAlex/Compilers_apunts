@@ -33,7 +33,7 @@ Obviament tot es pot combinar, si que hi ha una espècie d'ordre en el que s'han
 
 # PROCÉS DE COMPILACIÓ PAS A PAS
 
-![Esquema del proces de compilacio](.\Images\compiler_process_esquema.PNG)
+![Esquema del proces de compilacio](./Images/compiler_process_esquema.PNG)
 
 Per fer tots aquests passos a la CMD es fa el següent:
 1. Preprocessing: AMb el *GNU C preprocessor*, **cpp.exe**, aqui s'inclouen els header files (`#include <>`) i s'expandeixen les macros que s'hagin definit.
@@ -65,7 +65,7 @@ Per fer tots aquests passos a la CMD es fa el següent:
 
 # MAKEFILE (i el programa make.exe o mingw32.make.exe)
 
-La makefile no funcionava perque no tenia el programa **make.exe** o **mingw32-make.exe** i per tant cmd no ho reconeix com a command (ja que no venen com a default amb la instal·lació de *mingw64*)
+La makefile no funcionava perque no tenia el programa **make.exe** o **mingw32-make.exe** i per tant cmd no ho reconeix com a command (ja que no venen com a default amb la instal·lació de *mingw64* no sé perquè. Tampoc existeix el **ming64-make.exe**, però es pot fer servir el **mingw32-make.exe** i funciona perfectament (de moment))
 
 
 Per a tenir el **mingw32-make.exe** el que s'ha de fer es obrir **mingw64.exe** (la seva bash) i posar el command:
