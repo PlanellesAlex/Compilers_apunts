@@ -49,7 +49,7 @@ Per fer tots aquests passos a la CMD es fa el següent:
 
     `as -o hello.o hello.s`
 
-4. Linking: el linker, **ld.exe** linkeja el object code amb les llibreries i produeix un executable file
+4. Linking: el linker, **ld.exe**, linkeja el object code amb les llibreries i produeix un executable file
 
     `ld -o hello.exe hello.o ...libraries...`
 
