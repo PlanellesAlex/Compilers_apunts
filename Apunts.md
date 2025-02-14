@@ -35,5 +35,28 @@ Obviament tot es pot combinar, si que hi ha una espècie d'ordre en el que s'han
 
 ![Esquema del proces de compilacio](.\Images\compiler_process_esquema.PNG)
 
+Per fer tots aquests passos a la CMD es fa el següent:
+1. Preprocessing: AMb el *GNU C preprocessor*, **cpp.exe**, aqui s'inclouen els header files (`#include <>`) i s'expandeixen les macros que s'hagin definit.
+
+    `cpp hello.c > hello.i`
+
+2. Compilation: Es fa servir el compilador amb l'argument `-S` que indica que vols assembly code encomptes de object code
+
+    `g++ -S hello.i`  i obtens la file *hello.s*\
+    `gcc -S hello.i`  i obtens la file *hello.s*
+
+3. Assembly: El assembler, **as.exe**, converteis el codi en assembly a machine code (binari), es a dir en extensio *\*.o*
+
+    `as -o hello.o hello.s`
+
+4. Linking: el linker, **ld.exe** linkeja el object code amb les llibreries i produeix un executable file
+
+    `ld -o hello.exe hello.o ...libraries...`
 
 
+
+# DIFERENTS TIPUS DE LLIBRERIES I HEADER FILES
+
+- Headers: Acabats amb *.h*
+- Static libraries: Acabades amb *.lib*, *.a*
+- Shared libraries: Acabades amb *.dll*, *.so*
